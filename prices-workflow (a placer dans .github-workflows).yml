@@ -1,0 +1,37 @@
+name: Relevé quotidien des prix
+
+on:
+  schedule:
+    - cron: "20 4 * * *"     # 04:20 UTC, après la mise à jour quotidienne de Cardmarket
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  releve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Relever les prix Cardmarket
+        run: python fetch_prices.py
+
+      - name: Vérifier que la page se reconstruit
+        run: python build.py      # échoue si le résultat est dégradé (garde-fous intégrés)
+
+      - name: Publier le relevé
+        run: |
+          git config user.name  "prices-bot"
+          git config user.email "prices-bot@users.noreply.github.com"
+          if git diff --quiet -- prices.json releve.json; then
+            echo "Aucun changement de prix."
+          else
+            git add prices.json releve.json products.json
+            git commit -m "Prix Cardmarket du $(date -u +%Y-%m-%d)"
+            git push
+          fi
