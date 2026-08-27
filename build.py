@@ -42,116 +42,129 @@ serie_opts = "".join(
 page = """<title>Radar Promos JP</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap">
 <style>
 :root{
-  --ground:#F4F2EC; --surface:#FFFFFF; --surface-2:#EDEAE1; --line:#D9D4C7;
-  --ink:#17181D; --ink-2:#55545C; --ink-3:#8C8A90;
-  --gold:#A9761A; --gold-soft:#F0E0BC;
-  --cheap:#1F7A6B; --mid:#8A7A2E; --dear:#A83E38;
-  --shadow:0 1px 2px rgba(20,18,10,.06),0 8px 20px rgba(20,18,10,.05);
+  --ground:#EEF6FA; --surface:#FFFFFF; --surface-2:#E2EEF5; --line:#C9DDE9;
+  --ink:#16222E; --ink-2:#4E6274; --ink-3:#869AAA;
+  --pop:#E8453C; --pop-soft:#FFE1DD; --pop-on:#FFFFFF;
+  --sun:#FFC22E; --sun-ink:#4A3405;
+  --cheap:#0E9B85; --mid:#C08A12; --dear:#4A63C9;
+  --shadow:0 2px 0 rgba(22,34,46,.06),0 10px 22px rgba(22,60,90,.09);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --ground:#111319; --surface:#191C23; --surface-2:#232730; --line:#31353F;
-    --ink:#ECEAE3; --ink-2:#A5A3A8; --ink-3:#74737A;
-    --gold:#E3AE41; --gold-soft:#3A3018;
-    --cheap:#4FC0AB; --mid:#D2BC5E; --dear:#E8756D;
-    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 26px rgba(0,0,0,.35);
+    --ground:#0F1822; --surface:#17232F; --surface-2:#1F2E3D; --line:#2C3F52;
+    --ink:#E9F2F8; --ink-2:#9FB3C4; --ink-3:#74899C;
+    --pop:#FF6A5E; --pop-soft:#3B1F1D; --pop-on:#1A0B09;
+    --sun:#FFD25E; --sun-ink:#3A2A04;
+    --cheap:#3FD0B6; --mid:#E7BE4A; --dear:#8098F0;
+    --shadow:0 2px 0 rgba(0,0,0,.3),0 12px 26px rgba(0,0,0,.42);
   }
 }
 :root[data-theme="dark"]{
-  --ground:#111319; --surface:#191C23; --surface-2:#232730; --line:#31353F;
-  --ink:#ECEAE3; --ink-2:#A5A3A8; --ink-3:#74737A;
-  --gold:#E3AE41; --gold-soft:#3A3018;
-  --cheap:#4FC0AB; --mid:#D2BC5E; --dear:#E8756D;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 26px rgba(0,0,0,.35);
+  --ground:#0F1822; --surface:#17232F; --surface-2:#1F2E3D; --line:#2C3F52;
+  --ink:#E9F2F8; --ink-2:#9FB3C4; --ink-3:#74899C;
+  --pop:#FF6A5E; --pop-soft:#3B1F1D; --pop-on:#1A0B09;
+  --sun:#FFD25E; --sun-ink:#3A2A04;
+  --cheap:#3FD0B6; --mid:#E7BE4A; --dear:#8098F0;
+  --shadow:0 2px 0 rgba(0,0,0,.3),0 12px 26px rgba(0,0,0,.42);
 }
 *{box-sizing:border-box}
 body{
   margin:0; background:var(--ground); color:var(--ink);
-  font-family:"Zen Kaku Gothic New",system-ui,-apple-system,"Segoe UI",sans-serif;
-  font-size:15px; line-height:1.5; -webkit-font-smoothing:antialiased;
+  font-family:"Zen Maru Gothic",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased;
 }
 .wrap{max-width:1360px;margin:0 auto;padding:28px 20px 72px}
 header.top{display:flex;flex-wrap:wrap;align-items:flex-end;gap:20px 28px;margin-bottom:22px}
-h1{font-size:26px;font-weight:700;margin:0;letter-spacing:-.01em;text-wrap:balance}
-h1 .jp{color:var(--gold);font-weight:500}
-.sub{margin:4px 0 0;color:var(--ink-2);font-size:13.5px;max-width:62ch}
-.stats{display:flex;gap:22px;margin-left:auto;flex-wrap:wrap}
-.stat{min-width:76px}
-.stat b{display:block;font-family:"Roboto Mono",ui-monospace,monospace;font-size:20px;font-weight:500;font-variant-numeric:tabular-nums;line-height:1.2}
-.stat span{display:block;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);margin-top:2px}
+h1{font-family:"Mochiy Pop One","Zen Maru Gothic",system-ui,sans-serif;font-size:30px;font-weight:400;margin:0;letter-spacing:.005em;text-wrap:balance;line-height:1.2}
+h1 .jp{color:var(--pop)}
+.sub{margin:6px 0 0;color:var(--ink-2);font-size:13.5px;max-width:60ch}
+.stats{display:flex;gap:10px;margin-left:auto;flex-wrap:wrap}
+.stat{min-width:88px;background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:8px 13px 7px;box-shadow:var(--shadow)}
+.stat b{display:block;font-family:"Roboto Mono",ui-monospace,monospace;font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.2}
+.stat span{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:3px}
 
-.controls{position:sticky;top:0;z-index:20;background:var(--ground);padding:10px 0 12px;border-bottom:1px solid var(--line);margin-bottom:20px}
+.controls{position:sticky;top:0;z-index:20;background:var(--ground);padding:12px 0 13px;border-bottom:2px solid var(--line);margin-bottom:22px}
 .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.row + .row{margin-top:9px}
+.row + .row{margin-top:10px}
 input[type=search],select{
   font-family:inherit;font-size:13.5px;color:var(--ink);background:var(--surface);
-  border:1px solid var(--line);border-radius:7px;padding:7px 10px;
+  border:2px solid var(--line);border-radius:11px;padding:7px 12px;
 }
-input[type=search]{min-width:230px;flex:0 1 300px}
-input[type=search]:focus-visible,select:focus-visible,.chip:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+input[type=search]{min-width:230px;flex:0 1 300px;border-radius:99px;padding-left:15px}
+input[type=search]:focus-visible,select:focus-visible,.chip:focus-visible,button:focus-visible,.card:focus-visible{outline:3px solid var(--pop);outline-offset:2px}
 .chip{
-  font:inherit;font-size:12.5px;cursor:pointer;background:var(--surface);color:var(--ink-2);
-  border:1px solid var(--line);border-radius:99px;padding:6px 13px;transition:background .12s,color .12s,border-color .12s;
+  font:inherit;font-size:12.5px;font-weight:500;cursor:pointer;background:var(--surface);color:var(--ink-2);
+  border:2px solid var(--line);border-radius:99px;padding:6px 14px;transition:background .14s,color .14s,border-color .14s,transform .14s;
 }
-.chip:hover{border-color:var(--gold)}
-.chip[aria-pressed="true"]{background:var(--gold-soft);border-color:var(--gold);color:var(--ink);font-weight:500}
-.grouplabel{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);margin-right:2px}
+.chip:hover{border-color:var(--pop);color:var(--ink);transform:translateY(-1px)}
+.chip[aria-pressed="true"]{background:var(--pop);border-color:var(--pop);color:var(--pop-on);font-weight:700}
+.grouplabel{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-right:2px}
 .count{margin-left:auto;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:13px}
 .card{
-  background:var(--surface);border:1px solid var(--line);border-radius:11px;overflow:hidden;
+  background:var(--surface);border:2px solid var(--line);border-radius:15px;overflow:hidden;
   box-shadow:var(--shadow);display:flex;flex-direction:column;text-align:left;
-  font:inherit;color:inherit;padding:0;cursor:pointer;transition:transform .13s ease,border-color .13s;
+  font:inherit;color:inherit;padding:0;cursor:pointer;transition:transform .16s ease,border-color .16s,box-shadow .16s;
 }
-.card:hover{transform:translateY(-2px);border-color:var(--gold)}
+.card:hover{transform:translateY(-4px) rotate(-.5deg);border-color:var(--serie,var(--pop));box-shadow:0 4px 0 rgba(22,34,46,.07),0 16px 30px rgba(22,60,90,.16)}
 .thumbbox{position:relative;background:var(--surface-2);aspect-ratio:63/88;display:flex;align-items:center;justify-content:center}
-.thumbbox.empty{aspect-ratio:auto;min-height:46px;border-bottom:1px solid var(--line)}
+.thumbbox.empty{aspect-ratio:auto;min-height:46px;border-bottom:2px solid var(--line)}
 .thumbbox img{width:100%;height:100%;object-fit:cover;display:block}
 .noimg{font-size:11.5px;color:var(--ink-3);text-align:center;padding:12px;line-height:1.4}
 .tag{
   position:absolute;bottom:6px;right:6px;font-size:9px;letter-spacing:.07em;text-transform:uppercase;
-  background:rgba(18,16,10,.78);color:#F2D9A0;padding:2px 6px;border-radius:4px;font-weight:500;
+  background:rgba(10,20,30,.8);color:#FFE9A8;padding:3px 7px;border-radius:99px;font-weight:700;
   backdrop-filter:blur(2px);
 }
-.tag-soon{background:rgba(31,122,107,.9);color:#EAFBF6}
-.fav{
-  position:absolute;top:5px;left:5px;width:22px;height:22px;line-height:21px;text-align:center;
-  border-radius:50%;font-size:13px;cursor:pointer;user-select:none;
-  background:rgba(18,16,10,.55);color:rgba(255,255,255,.72);backdrop-filter:blur(2px);
-  transition:transform .12s,color .12s,background .12s;
+.tag-soon{background:rgba(14,155,133,.92);color:#EAFBF6}
+.deal{
+  position:absolute;top:5px;right:5px;font-family:"Mochiy Pop One","Zen Maru Gothic",sans-serif;
+  font-size:11px;background:var(--sun);color:var(--sun-ink);padding:3px 8px;border-radius:99px;
+  box-shadow:0 2px 0 rgba(22,34,46,.18);
 }
-.fav:hover{transform:scale(1.12);color:#F2D9A0}
-.fav.on{background:var(--gold);color:#1B1508}
-.fav:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-.chip-fav .st{color:var(--gold)}
+.fav{
+  position:absolute;top:5px;left:5px;width:24px;height:24px;line-height:23px;text-align:center;
+  border-radius:50%;font-size:14px;cursor:pointer;user-select:none;
+  background:rgba(10,20,30,.5);color:rgba(255,255,255,.78);backdrop-filter:blur(2px);
+  transition:transform .14s,color .14s,background .14s;
+}
+.fav:hover{transform:scale(1.18) rotate(-8deg);color:var(--sun)}
+.fav.on{background:var(--sun);color:var(--sun-ink)}
+.fav:focus-visible{outline:3px solid var(--pop);outline-offset:2px}
+.chip-fav .st{color:var(--sun)}
+.chip-fav[aria-pressed="true"] .st{color:var(--pop-on)}
 .chip-fav em{font-style:normal;font-variant-numeric:tabular-nums;color:var(--ink-3);margin-left:2px}
-.chip-fav[aria-pressed="true"] em{color:var(--ink)}
+.chip-fav[aria-pressed="true"] em{color:var(--pop-on)}
 .chip:disabled{opacity:.45;cursor:not-allowed}
 .dfav{
-  font:inherit;font-size:12.5px;cursor:pointer;border:1px solid var(--line);border-radius:7px;
-  padding:6px 11px;background:var(--surface-2);color:var(--ink);
+  font:inherit;font-size:12.5px;font-weight:500;cursor:pointer;border:2px solid var(--line);border-radius:99px;
+  padding:6px 13px;background:var(--surface-2);color:var(--ink);
 }
-.dfav.on{background:var(--gold);border-color:var(--gold);color:#1B1508;font-weight:500}
-.meta{padding:8px 9px 10px;display:flex;flex-direction:column;gap:2px;flex:1}
+.dfav.on{background:var(--sun);border-color:var(--sun);color:var(--sun-ink);font-weight:700}
+.meta{padding:9px 10px 11px;display:flex;flex-direction:column;gap:2px;flex:1;border-top:3px solid var(--serie,var(--line))}
+.s-SV-P{--serie:#EF5B4C} .s-M-P{--serie:#F2913A} .s-S-P{--serie:#E0AC12}
+.s-SM-P{--serie:#7FB733} .s-XY-P{--serie:#2FB48A} .s-BW-P{--serie:#2FA3C4}
+.s-DPt-P{--serie:#4C7BD9} .s-DP-P{--serie:#7A5AD6} .s-L-P{--serie:#B45CC0}
+.s-PCG-P{--serie:#E0559A} .s-ADV-P{--serie:#A5744A} .s-NN{--serie:#8A97AB}
 .nm{font-size:12.5px;font-weight:500;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .ja{font-size:11.5px;color:var(--ink-3)}
 .ref{font-family:"Roboto Mono",monospace;font-size:10.5px;color:var(--ink-3);letter-spacing:.02em}
 .diff{display:flex;align-items:center;gap:6px;margin-top:8px;font-size:10.5px;color:var(--ink-2)}
 .diff em{font-style:normal;font-variant-numeric:tabular-nums}
 .mtr{display:inline-flex;gap:2px;flex:none}
-.mtr i{width:5px;height:11px;border-radius:1px;background:var(--surface-2);border:1px solid var(--line)}
+.mtr i{width:5px;height:11px;border-radius:99px;background:var(--surface-2);border:1px solid var(--line)}
 .mtr i.on{border-color:transparent}
-.mtr i.on.l1{background:#8E2F2A}.mtr i.on.l2{background:#B8632B}
-.mtr i.on.l3{background:#9A8A2E}.mtr i.on.l4{background:#4E8C6A}.mtr i.on.l5{background:#7C8794}
+.mtr i.on.l1{background:#E8453C}.mtr i.on.l2{background:#F2913A}
+.mtr i.on.l3{background:#E0AC12}.mtr i.on.l4{background:#3FA98F}.mtr i.on.l5{background:#8A97AB}
 .how{display:flex;align-items:center;gap:5px;margin-top:6px;font-size:11px;font-weight:500;color:var(--ink)}
-.k{width:7px;height:7px;border-radius:2px;flex:none;background:var(--ink-3)}
-.k-achat{background:#C98A1F}.k-boutique{background:#3F7FBF}.k-tournoi{background:#B05252}
-.k-campagne{background:#8A6BC0}.k-produit{background:#2E8B7F}.k-magazine{background:#C06BA0}
-.k-collaboration{background:#5FA03C}.k-jeu-vidéo{background:#3C7A8F}.k-concours{background:#9A8A2E}
+.k{width:8px;height:8px;border-radius:99px;flex:none;background:var(--ink-3)}
+.k-achat{background:#E8A317}.k-boutique{background:#3F8FD9}.k-tournoi{background:#E8453C}
+.k-campagne{background:#8A6BC0}.k-produit{background:#0E9B85}.k-magazine{background:#E0559A}
+.k-collaboration{background:#7FB733}.k-jeu-vidéo{background:#2FA3C4}.k-concours{background:#C08A12}
 .src{font-size:11px;color:var(--ink-2);margin-top:2px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
 .price{display:flex;align-items:baseline;gap:6px;margin-top:auto;padding-top:6px;font-family:"Roboto Mono",monospace;font-variant-numeric:tabular-nums}
 .price b{font-size:15px;font-weight:500;white-space:nowrap}
@@ -160,14 +173,14 @@ input[type=search]:focus-visible,select:focus-visible,.chip:focus-visible,button
 .b-none b{color:var(--ink-3);font-size:13px}
 
 dialog{
-  border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);
+  border:3px solid var(--line);border-radius:20px;background:var(--surface);color:var(--ink);
   padding:0;max-width:min(620px,92vw);box-shadow:0 24px 60px rgba(0,0,0,.35);
 }
-dialog::backdrop{background:rgba(10,10,14,.55)}
+dialog::backdrop{background:rgba(8,22,34,.6)}
 .dwrap{display:flex;gap:18px;padding:20px}
 .dwrap img{width:190px;border-radius:8px;align-self:flex-start;background:var(--surface-2)}
 .dinfo{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
-.dinfo h2{margin:0;font-size:20px;font-weight:700}
+.dinfo h2{margin:0;font-size:21px;font-weight:400;font-family:"Mochiy Pop One","Zen Maru Gothic",sans-serif;line-height:1.25}
 .dl{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;margin:12px 0 0;font-size:13px}
 .dl dt{color:var(--ink-3);font-size:11px;letter-spacing:.06em;text-transform:uppercase;align-self:center}
 .dl dd{margin:0;font-family:"Roboto Mono",monospace;font-variant-numeric:tabular-nums}
@@ -177,12 +190,12 @@ dialog::backdrop{background:rgba(10,10,14,.55)}
 .dl dd.est .mtr{vertical-align:-1px}
 .links{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
 .links a{
-  font-size:12.5px;text-decoration:none;color:var(--ink);background:var(--surface-2);
-  border:1px solid var(--line);border-radius:7px;padding:6px 11px;
+  font-size:12.5px;font-weight:500;text-decoration:none;color:var(--ink);background:var(--surface-2);
+  border:2px solid var(--line);border-radius:99px;padding:6px 13px;
 }
-.links a:hover{border-color:var(--gold);color:var(--gold)}
-.close{position:absolute;top:10px;right:12px;background:none;border:0;color:var(--ink-3);font-size:22px;cursor:pointer;line-height:1}
-footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink-3);font-size:12px;line-height:1.7}
+.links a:hover{border-color:var(--pop);color:var(--pop)}
+.close{position:absolute;top:10px;right:12px;background:none;border:0;color:var(--ink-3);font-size:24px;cursor:pointer;line-height:1}
+footer{margin-top:44px;padding-top:20px;border-top:2px solid var(--line);color:var(--ink-3);font-size:12px;line-height:1.7}
 footer a{color:var(--ink-2)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (max-width:620px){
@@ -259,6 +272,8 @@ footer a{color:var(--ink-2)}
     <p><strong>Dates et obtention.</strong> Le descriptif est celui de la source, carte par carte — pas une règle générale appliquée à une famille de cartes. Quand une carte a circulé par plusieurs canaux, ils sont tous listés et la date retenue est celle de la <em>première</em> distribution. Les cartes marquées «&nbsp;à paraître&nbsp;» ont une date de sortie annoncée postérieure à aujourd'hui — leur cote existe déjà en précommande, mais leur visuel n'est pas encore publié.</p>
     <p><strong>Diffusion&nbsp;: une estimation, pas un tirage.</strong> The Pokémon Company n'a jamais publié de chiffre de tirage, pour aucune carte — la fourchette affichée est <em>déduite du canal de distribution documenté</em> et signalée partout par le signe «&nbsp;~&nbsp;» et un trait pointillé. Cinq niveaux, de «&nbsp;quelques dizaines&nbsp;» (lot du vainqueur d'un tournoi national) à «&nbsp;plus d'un million&nbsp;» (bonus d'un jeu à succès). Contrôle de cohérence sur les 1&nbsp;650 cartes classées&nbsp;: le prix médian décroît du niveau&nbsp;1 au niveau&nbsp;5 — 19,49&nbsp;€, 15,99&nbsp;€, 15,79&nbsp;€, 6,20&nbsp;€, 1,50&nbsp;€. L'ordre tient, mais l'écart entre les trois premiers niveaux est faible&nbsp;: sur les séries anciennes, la rareté joue moins que l'âge et la demande. À prendre comme un indice, pas comme une mesure.</p>
     <p><strong>Favoris.</strong> L'étoile en haut à gauche d'une carte la met de côté, et la puce «&nbsp;Favoris&nbsp;» n'affiche plus qu'elles. La liste est enregistrée <em>dans ce navigateur seulement</em>&nbsp;: elle n'est ni transmise, ni partagée avec les personnes à qui vous ouvririez la page, et ne suit pas d'un appareil à l'autre. Elle survit en revanche aux actualisations quotidiennes de la page, parce qu'elle est indexée sur l'identifiant produit Cardmarket, qui ne bouge pas. Un navigateur en navigation privée, ou réglé pour bloquer le stockage des sites, désactive la fonction — la puce apparaît alors grisée.</p>
+    <p><strong>Le badge de décote.</strong> La pastille jaune «&nbsp;−XX&nbsp;%&nbsp;» signale une offre basse située à 40&nbsp;% ou plus sous la tendance, et seulement sur les cartes dont la tendance dépasse 8&nbsp;€ et l'offre 1&nbsp;€ — en dessous, le rapport est trop bruité pour vouloir dire quoi que ce soit. <strong>Ce n'est pas une bonne affaire vérifiée&nbsp;:</strong> un écart de cette taille vient le plus souvent d'un exemplaire abîmé ou d'une autre version du même visuel. Le guide de prix Cardmarket ne descend pas au niveau de l'état de la carte&nbsp;; le badge dit où regarder, pas quoi acheter.</p>
+    <p><strong>Les couleurs de série.</strong> Le trait de couleur en tête de chaque carte identifie sa série promo — une teinte par série, de la plus récente (SV-P, rouge) à la plus ancienne (ADV-P, brun), les promos non numérotées en gris.</p>
     <p><strong>Détection «&nbsp;full art&nbsp;».</strong> Les promos japonaises ne portent pas de marque de rareté&nbsp;: le classement full art est <em>déduit automatiquement de l'analyse du visuel</em>, et n'existe donc que pour les cartes qui en ont un. Ce n'est pas une donnée publiée par l'éditeur.</p>
   </footer>
 </div>
@@ -313,6 +328,13 @@ footer a{color:var(--ink-2)}
     :(c.annee?'courant '+c.annee:'date inconnue');
   const future=c=>c.date&&c.date>TODAY;
 
+  // Décote affichée seulement là où elle veut dire quelque chose : sous 8 € de tendance
+  // ou sous 1 € d’offre, le rapport est trop bruité pour signaler une occasion.
+  function decote(c){
+    if(c.low==null||!c.trend||c.trend<8||c.low<1) return null;
+    const p=Math.round((1-c.low/c.trend)*100);
+    return p>=40 ? p : null;
+  }
   function band(c){
     if(c.low==null) return 'b-none';
     if(c.low<1) return 'b-cheap';
@@ -348,14 +370,15 @@ footer a{color:var(--ink-2)}
     const frag=document.createDocumentFragment();
     for(const c of rows){
       const el=document.createElement('button');
-      el.className='card '+band(c); el.type='button';
-      const label=nom(c);
+      el.className='card '+band(c)+' s-'+c.set; el.type='button';
+      const label=nom(c), dec=decote(c);
       el.innerHTML=
         '<div class="thumbbox'+(c.thumb?'':' empty')+'">'+(c.thumb
           ? '<img loading="lazy" alt="'+esc(label)+'" src="'+c.thumb+'">'
           : '<div class="noimg">'+(future(c)?'visuel pas encore<br>publié':'visuel<br>non rattaché')+'</div>')
         +(future(c)?'<span class="tag tag-soon">à paraître</span>'
           :(c.fa?'<span class="tag">'+(c.energy?'Énergie':'Full art')+'</span>':''))
+        +(dec?'<span class="deal" title="Offre la plus basse à '+dec+' % sous la tendance — vérifier l’état sur l’annonce">−'+dec+' %</span>':'')
         +'<span class="fav'+(estFav(c)?' on':'')+'" role="button" tabindex="0" aria-pressed="'+estFav(c)+'" aria-label="'+(estFav(c)?'Retirer des favoris':'Mettre en favori')+'">★</span>'
         +'</div>'
         +'<div class="meta"><span class="nm">'+esc(label)+'</span>'
