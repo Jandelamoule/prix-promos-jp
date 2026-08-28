@@ -8,11 +8,22 @@ on:
 permissions:
   contents: write
 
+# Deux relevés simultanés se pousseraient dessus. Le second attend, il n'écrase pas.
+concurrency:
+  group: releve-prix
+  cancel-in-progress: false
+
 jobs:
   releve:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Sans `ref`, le runner sort le commit qui a DÉCLENCHÉ le run. Sur une
+          # ré-exécution, c'est un commit ancien : le push part alors d'une base
+          # périmée et se fait rejeter. On veut toujours la pointe de main.
+          ref: main
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -26,12 +37,35 @@ jobs:
 
       - name: Publier le relevé
         run: |
+          set -u
           git config user.name  "prices-bot"
           git config user.email "prices-bot@users.noreply.github.com"
-          if git diff --quiet -- prices.json releve.json; then
-            echo "Aucun changement de prix."
-          else
-            git add prices.json releve.json products.json
-            git commit -m "Prix Cardmarket du $(date -u +%Y-%m-%d)"
-            git push
-          fi
+
+          # prices.json, releve.json et products.json sont ENTIÈREMENT REGÉNÉRÉS
+          # depuis Cardmarket : ils ne se fusionnent pas, la version fraîche
+          # remplace l'ancienne. On repose donc le commit sur la pointe distante
+          # au lieu de rebaser — un rebase sur des fichiers générés ne produit
+          # que des conflits sans objet.
+          publier() {
+            git fetch origin main || return 1
+            git reset --mixed origin/main || return 1   # HEAD = pointe distante, fichiers générés conservés
+            if git diff --quiet -- prices.json releve.json; then
+              echo "Aucun changement de prix."
+              return 0
+            fi
+            git add prices.json releve.json products.json || return 1
+            git commit -m "Prix Cardmarket du $(date -u +%Y-%m-%d)" || return 1
+            git push origin HEAD:main
+          }
+
+          for essai in 1 2 3; do
+            if publier; then
+              echo "Relevé publié (tentative $essai)."
+              exit 0
+            fi
+            echo "Tentative $essai rejetée — la branche a bougé, on repart de la pointe."
+            sleep 5
+          done
+
+          echo "::error::Publication impossible après 3 tentatives."
+          exit 1
