@@ -6066,7 +6066,7 @@
 },
 "566095": {
 "e": 4274,
-"n": "Pikachu [Recharge | Thunderbolt]",
+"n": "Pikachu [Recharge | Thunderbolt | HGSS]",
 "s": "L-P"
 },
 "566096": {
@@ -8726,7 +8726,7 @@
 },
 "571838": {
 "e": 4170,
-"n": "Trainer Certification Card",
+"n": "Trainer Certification Card [Grand Party]",
 "s": "NN"
 },
 "571839": {
@@ -9131,7 +9131,7 @@
 },
 "573615": {
 "e": 3214,
-"n": "Celebration Fanfare",
+"n": "Celebratory Fanfare",
 "s": "S-P"
 },
 "573770": {
@@ -9861,7 +9861,7 @@
 },
 "669627": {
 "e": 3214,
-"n": "Celebration Fanfare",
+"n": "Celebratory Fanfare",
 "s": "S-P"
 },
 "671881": {
@@ -10541,7 +10541,7 @@
 },
 "724964": {
 "e": 5212,
-"n": "Celebration Fanfare",
+"n": "Celebratory Fanfare",
 "s": "SV-P"
 },
 "725341": {
@@ -11196,7 +11196,7 @@
 },
 "781842": {
 "e": 5212,
-"n": "Celebration Fanfare",
+"n": "Celebratory Fanfare",
 "s": "SV-P"
 },
 "783439": {
@@ -11701,7 +11701,7 @@
 },
 "807435": {
 "e": 5212,
-"n": "Hop's Pincurchin ex [Spike Thunder]",
+"n": "Hop's Pincurchin ex [Counterattack Quills | Spiky Thunder]",
 "s": "SV-P"
 },
 "807436": {
@@ -11811,7 +11811,7 @@
 },
 "821710": {
 "e": 5212,
-"n": "Team Rocket's Kangaskhan ex [Comet Punch | Bad Impact]",
+"n": "Team Rocket's Kangaskhan ex [Comet Punch | Wicked Impact]",
 "s": "SV-P"
 },
 "821711": {
@@ -11821,7 +11821,7 @@
 },
 "821712": {
 "e": 5212,
-"n": "Team Rocket's Hypnosis Device",
+"n": "Team Rocket's Hypnotizer",
 "s": "SV-P"
 },
 "821713": {
@@ -11841,7 +11841,7 @@
 },
 "825497": {
 "e": 5212,
-"n": "Espeon ex [Psych Out | Amezez]",
+"n": "Espeon ex [Psych Out | Amazez]",
 "s": "SV-P"
 },
 "825498": {
@@ -12046,7 +12046,7 @@
 },
 "839225": {
 "e": 6230,
-"n": "Digging Shovel",
+"n": "Hole-Digging Shovel",
 "s": "M-P"
 },
 "839228": {
@@ -12136,7 +12136,7 @@
 },
 "841214": {
 "e": 6230,
-"n": "Celebration Fanfare",
+"n": "Celebratory Fanfare",
 "s": "M-P"
 },
 "841254": {
@@ -12296,7 +12296,7 @@
 },
 "858267": {
 "e": 6230,
-"n": "Struggle Policy",
+"n": "Adversity Policy",
 "s": "M-P"
 },
 "858268": {
@@ -12721,12 +12721,12 @@
 },
 "891898": {
 "e": 6230,
-"n": "Chespin [Pin Missle | MEP]",
+"n": "Chespin [Pin Missile | MEP]",
 "s": "M-P"
 },
 "891899": {
 "e": 6230,
-"n": "Fennekin [Pin Missle | MEP]",
+"n": "Fennekin [Scratch | MEP]",
 "s": "M-P"
 },
 "891900": {
