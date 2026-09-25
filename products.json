@@ -9766,7 +9766,7 @@
 },
 "660428": {
 "e": 3214,
-"n": "Prankster Pichu [Panic Party]",
+"n": "Mischievous Pichu [Panic Party]",
 "s": "S-P"
 },
 "664342": {
@@ -12838,5 +12838,105 @@
 "e": 4170,
 "n": "Articuno, Moltres, and Zapdos [Big Bang]",
 "s": "NN"
+},
+"912725": {
+"e": 6230,
+"n": "Lillie's Determination",
+"s": "M-P"
+},
+"912726": {
+"e": 6230,
+"n": "Mega Audino ex [Kaleidowaltz | Ear Force]",
+"s": "M-P"
+},
+"912727": {
+"e": 6230,
+"n": "Alolan Exeggutor [Scale Up | Mega Drain]",
+"s": "M-P"
+},
+"912728": {
+"e": 6230,
+"n": "Moltres [Fiery Flapping | Fire Spin]",
+"s": "M-P"
+},
+"912729": {
+"e": 6230,
+"n": "Articuno [Frosty Flapping | Hail]",
+"s": "M-P"
+},
+"912730": {
+"e": 6230,
+"n": "Greninja ex [Stealthy Slash | Aqua Edge]",
+"s": "M-P"
+},
+"912731": {
+"e": 6230,
+"n": "Zapdos [Flash-Pop Flapping | Thundering Lightning]",
+"s": "M-P"
+},
+"912732": {
+"e": 6230,
+"n": "Sylveon ex [Colorful Harmony]",
+"s": "M-P"
+},
+"912733": {
+"e": 6230,
+"n": "Lucario [Aura Sphere]",
+"s": "M-P"
+},
+"912734": {
+"e": 6230,
+"n": "Riolu [Accelerating Stab]",
+"s": "M-P"
+},
+"912735": {
+"e": 6230,
+"n": "Basic Grass Energy",
+"s": "M-P"
+},
+"912736": {
+"e": 6230,
+"n": "Basic Fire Energy",
+"s": "M-P"
+},
+"912737": {
+"e": 6230,
+"n": "Basic Water Energy",
+"s": "M-P"
+},
+"912738": {
+"e": 6230,
+"n": "Basic Lightning Energy",
+"s": "M-P"
+},
+"912739": {
+"e": 6230,
+"n": "Basic Psychic Energy",
+"s": "M-P"
+},
+"912740": {
+"e": 6230,
+"n": "Basic Fighting Energy",
+"s": "M-P"
+},
+"912741": {
+"e": 6230,
+"n": "Basic Darkness Energy",
+"s": "M-P"
+},
+"912742": {
+"e": 6230,
+"n": "Basic Metal Energy",
+"s": "M-P"
+},
+"912743": {
+"e": 6230,
+"n": "Mega Zeraora ex [Thunder Fist | Zepto Turn]",
+"s": "M-P"
+},
+"912744": {
+"e": 6230,
+"n": "Mega Signal",
+"s": "M-P"
 }
 }
