@@ -12938,5 +12938,30 @@
 "e": 6230,
 "n": "Mega Signal",
 "s": "M-P"
+},
+"914409": {
+"e": 4159,
+"n": "Absol EX [Dark Fang | Dark Edge]",
+"s": "XY-P"
+},
+"914410": {
+"e": 4170,
+"n": "Skull Fossil [Skull Stone]",
+"s": "NN"
+},
+"914411": {
+"e": 4170,
+"n": "Armor Fossil [Armor Stone]",
+"s": "NN"
+},
+"914412": {
+"e": 4170,
+"n": "Bebe's Search",
+"s": "NN"
+},
+"914413": {
+"e": 4170,
+"n": "Time-Space Distortion",
+"s": "NN"
 }
 }
